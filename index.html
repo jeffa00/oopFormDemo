@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                </ul>  
+            </nav>
+        </header>
+        <div class="half-width center-block container">
+            <aside class="col-md-8">
+                <div id="vehicle-list-panel">
+                    <h1>Vehicle List</h1>
+                    <ul id="vehicle-list"></ul>
+                </div>
+            </aside> 
+            <main class="col-md-4">
+                <h1>Car Manager</h1>
+                <form action="http://formreflector.azurewebsites.net/form-reflector/" method="POST">
+                    <div>
+                        <label for="car-year">Year:</label>
+                        <input type="number" id="car-year" name="model-year" min="1900" max="2019" value="2017" required>
+                    </div>
+                    <div>
+                        <label for="car-make">Make:</label>
+                        <input type="text" id="car-make" name="manufacturer" list="make-list" required>
+
+                        <datalist id="make-list">
+                            <label for="suggestion">or pick a make</label>
+                            <select id="suggestion" name="altMake">
+                                <option value="Ford">Ford</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Kia">Kia</option>
+                            </select>
+                        </datalist>
+                    </div>
+                    <div>
+                        <label for="car-model">Model:</label>
+                        <input type="text" id="car-model" name="manufacturer-model" required>
+                    </div>
+                    <div>
+                        <label for="car-doors">Number of Doors</label>
+                        <input type="number" id="car-doors" name="number-of-doors" min="1" max="23" value="4" required>
+                    </div>
+
+                    <button type="submit" id="save-button">Save</button>
+                </form>
+            </main>
+        </div>
+    </body>
+</html>
