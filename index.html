@@ -20,45 +20,65 @@
                 </ul>  
             </nav>
         </header>
-        <div class="half-width center-block container">
-            <aside class="col-md-8">
-                <div id="vehicle-list-panel">
-                    <h1>Vehicle List</h1>
-                    <ul id="vehicle-list"></ul>
+        <div class="three-quarter-width center-block container">
+            <aside class="col-md-7">
+                <div id="vehicle-list-panel" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h1>Vehicle List</h1>
+                    </div>
+                    <ul id="vehicle-list" class="list-group">
+                    </ul>
                 </div>
             </aside> 
-            <main class="col-md-4">
-                <h1>Car Manager</h1>
-                <form action="http://formreflector.azurewebsites.net/form-reflector/" method="POST">
-                    <div>
-                        <label for="car-year">Year:</label>
-                        <input type="number" id="car-year" name="model-year" min="1900" max="2019" value="2017" required>
+            <main class="col-md-5">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h1>Car Manager</h1>
                     </div>
-                    <div>
-                        <label for="car-make">Make:</label>
-                        <input type="text" id="car-make" name="manufacturer" list="make-list" required>
+                    <div class="panel-body">
+                        <form action="http://formreflector.azurewebsites.net/form-reflector/" method="POST">
+                            <div class="form-group">
+                                <label for="car-year">Year:</label>
+                                <input type="number" id="car-year" name="model-year" min="1900" max="2019" value="2017" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="car-make">Make:</label>
+                                <input type="text" id="car-make" name="manufacturer" list="make-list" class="form-control" required>
 
-                        <datalist id="make-list">
-                            <label for="suggestion">or pick a make</label>
-                            <select id="suggestion" name="altMake">
-                                <option value="Ford">Ford</option>
-                                <option value="Chevrolet">Chevrolet</option>
-                                <option value="Kia">Kia</option>
-                            </select>
-                        </datalist>
-                    </div>
-                    <div>
-                        <label for="car-model">Model:</label>
-                        <input type="text" id="car-model" name="manufacturer-model" required>
-                    </div>
-                    <div>
-                        <label for="car-doors">Number of Doors</label>
-                        <input type="number" id="car-doors" name="number-of-doors" min="1" max="23" value="4" required>
-                    </div>
+                                <datalist id="make-list">
+                                    <label for="suggestion">or pick a make</label>
+                                    <select id="suggestion" name="altMake">
+                                        <option value="Ford">Ford</option>
+                                        <option value="Chevrolet">Chevrolet</option>
+                                        <option value="Kia">Kia</option>
+                                        <option value="Toyota">Toyota</option>
+                                    </select>
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <label for="car-model">Model:</label>
+                                <input type="text" id="car-model" name="manufacturer-model" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="car-doors">Number of Doors</label>
+                                <input type="number" id="car-doors" name="number-of-doors" min="1" max="23" value="4" class="form-control" required>
+                            </div>
 
-                    <button type="submit" id="save-button">Save</button>
-                </form>
+                            <button type="submit" id="save-button">Save</button>
+                        </form>
+                    </div>
+                </div>
             </main>
         </div>
+        <footer>
+            <small>&copy; 2017 Code Career Academy</small>
+        </footer>        
+        <!-- Latest compiled and minified JavaScript -->
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="/js/carManager.js"></script>
     </body>
 </html>
