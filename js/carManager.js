@@ -4,17 +4,19 @@
         carMake = document.getElementById("car-make"),
         carModel = document.getElementById("car-model"),
         carDoors = document.getElementById("car-doors"),
-        vehicleList = document.getElementById("vehicle-list");
+        vehicleList = document.getElementById("vehicle-list"),
+        maxVehicleId = 0;
 
     var Automobile = function Automobile(year, make, model){
+        this.id = maxVehicleId++;
         this.year = year;
         this.make = make;
         this.model = model;
 
         this.getFullName = function getFullName(){
-            return this.Year + " " +
-                    this.Make + " " +
-                    this.Model;
+            return  "Vehicle ID: " + this.id + " : " + this.year + " " +
+                    this.make + " " +
+                    this.model;
         }
     }
 
@@ -23,10 +25,10 @@
         this.doors = doors;
 
         this.getFullName = function getFullName(){
-            return this.Year + " " +
-            this.Make + " " +
-            this.Model + " " +
-            this.Doors;
+            return "Vehicle ID: " + this.id + " : " + this.year + " " +
+            this.make + " " +
+            this.model + " " +
+            this.doors;
         }
     }
 
